@@ -4,6 +4,15 @@ the next week, sorted by class.
 
 I will be using the pandas, datetime, twilio, and io modules, amongst others, and utilizing skills such as nested FOR loops, dataframe manipulation, index matching, etc.
 
+Files in the repository:
+ - ResumeFetcher.py is the main file 
+ - Dates.csv contains all of my Assignments with their Due Dates and Class 
+ - .env contains sensitive information (which is converted to xxx for this repository) 
+ - PythonAnywhere.png is a screenshot showing my automated task that launches my ResumeFetcher.py daily
+ - TextOutput is an example of a SMS message I've recieved from this program
+
+
+
 I created this project because I wanted an automated reminder system that I didn't have to consistently update, log into, flip through, etc. A system that I could set up once, 
 let it run, and not have to worry about it for the rest of the semester. This is why I chose a pandas csv file data format, instead of using JSON files that I 
 could delete, edit and insert on the fly. I also wanted to make locating my new classes a bit easier, as now I can just look at a text instead of having to navigate
