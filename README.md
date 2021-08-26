@@ -9,7 +9,7 @@ Files in the repository:
  - Dates.csv contains all of my Assignments with their Due Dates and Class 
  - .env contains sensitive information (which is converted to xxx for this repository) 
  - PythonAnywhere.png is a screenshot showing my automated task that launches my ResumeFetcher.py daily
- - TextOutput is an example of a SMS message I've recieved from this program
+ - TextOutput is an example of an SMS message I've recieved from this program
 
 
 
