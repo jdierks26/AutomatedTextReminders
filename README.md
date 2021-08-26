@@ -1,6 +1,6 @@
 # AutomatedReminders
 In this project, I will create a Python program that will send me a text message reminder daily that displays the date, my classes for the day, and any due dates within
-the next week, sorted by class.
+the next week, sorted by class. I will also use PythonAnywhere.com, a hosting service, to run my script daily.
 
 I will be using the pandas, datetime, twilio, and io modules, amongst others, and utilizing skills such as nested FOR loops, dataframe manipulation, index matching, etc.
 
@@ -10,8 +10,6 @@ Files in the repository:
  - .env contains sensitive information (which is converted to xxx for this repository) 
  - PythonAnywhere.png is a screenshot showing my automated task that launches my ResumeFetcher.py daily
  - TextOutput is an example of an SMS message I've recieved from this program
-
-
 
 I created this project because I wanted an automated reminder system that I didn't have to consistently update, log into, flip through, etc. A system that I could set up once, 
 let it run, and not have to worry about it for the rest of the semester. This is why I chose a pandas csv file data format, instead of using JSON files that I 
