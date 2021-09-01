@@ -5,8 +5,9 @@ import io
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
 from dotenv import load_dotenv
+import random
 
-# In this project, I will be using Twilio, datetime, pandas, and other modules/APIs to program an application that
+# In this project, I will be using Twilio, datetime, pandas, and other modules to program an application that
 # will send me a text message at the beginning of my day. The message will display the date, my classes for the day,
 # and any upcoming assignments for the next week, separated by class. THe output will look like this:
 
@@ -31,7 +32,7 @@ proxy_client = TwilioHttpClient(proxy={'http': os.getenv("http_proxy"), 'https':
 twilio_client = Client(http_client=proxy_client)
 
 # Loading in our .csv file that contains all my Due Dates, their Assignment, and their Class
-df = pd.read_csv(filepath_or_buffer='Dates.csv')
+df = pd.read_csv(filepath_or_buffer='/home/jdierks26/Due_Date_Reminders/Dates.csv')
 
 # Using the Datetime module to import the current date, and find next week's date using a timedelta so we can find
 # our upcoming due dates
@@ -95,6 +96,15 @@ for classes in class_list:
             print(" -> " + str(df.loc[i, 'Assignment']) + " - " + str(df.loc[i, 'formatdate']), file=f)
     print("------------------------------------", file=f)
 
+# Here I am creating another dataframe from our Quotes csv file
+df2 = pd.read_csv('/home/jdierks26/Due_Date_Reminders/Quotes.csv')
+
+# Generating a random index from our Quotes.csv index
+r_int = random.choice(df2.index)
+
+# Printing a random quote based off the random index number we generated
+print(df2.loc[r_int,'Quote'], file=f)
+
 # Storing our print statement outputs into a variable called 'output'
 output = f.getvalue()
 f.close()
@@ -120,4 +130,4 @@ send_message()
 # console to create the proper virtual environment to run my program with all it's dependencies. Once that is finished
 # I can create an automated task that will run our virtual environment and then execute this file daily at 8am.
 
-# thanks for checking out my project! 
+# thanks for checking out my project!
