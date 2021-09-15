@@ -9,7 +9,7 @@ import random
 
 # In this project, I will be using Twilio, datetime, pandas, and other modules to program an application that
 # will send me a text message at the beginning of my day. The message will display the date, my classes for the day,
-# and any upcoming assignments for the next week, separated by class. THe output will look like this:
+# and any upcoming assignments for the next week, separated by class. The output will look like this:
 
 # Thursday, August 26, 2021
 # ------------------------------------
@@ -109,7 +109,7 @@ print(df2.loc[r_int,'Quote'], file=f)
 output = f.getvalue()
 f.close()
 
-# Our function for sending messages. For our body we will just call our 'output' variable
+# Our function for sending messages. For our body we will just call our 'output' variable. Sensitive information has been xxx'd out. 
 def send_message():
     twilio_from = xxx
     to_phone_number = xxx
